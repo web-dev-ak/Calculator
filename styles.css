@@ -11,9 +11,13 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-body{overflow:hidden;}
+body{
+    overflow:hidden;
+}
+
 svg {
   width: 100vw;
   height: 100vh;
@@ -21,6 +25,8 @@ svg {
 
 #parent{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #calculator{
@@ -183,4 +189,51 @@ svg {
     background-color: #FF9497;
     box-shadow: 4px 4px 4px rgba(255, 148, 151, 0.25);
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+@media (max-width: 444px) {
+    #calculator {
+        width: 330px;
+        height: 532.5px; /* Adjust height if needed */
+        border-radius: 22.5px;
+    }
+
+    #calculator-display{
+        padding-top: 37.5px;
+        padding-left: 37.5px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    #DisplayInput, #DisplayResult {
+        width: 255px; /* Adjust the width of the inputs */
+        height: 52.5px;
+        border-radius: 11.25px;
+        font-size: 36px;
+    }
+
+    #calculator-buttons {
+        padding-left: 37.5px;
+        padding-top: 17px;
+        gap: 17px;   
+    }
+
+    #button-zero{
+        width: 120px;
+    }
+
+    .ButtonNumbers, .ButtonOperators {
+        width: 52.5px;
+        height: 52.5px; /* Adjust button size if needed */
+        font-size: 36px; /* Adjust font size if needed */
+        border-radius: 11.25px;
+    }
+
+    .ButtonResult, .ButtonClear {
+        width: 120px;
+        height: 52.5px;
+        font-size: 30px;
+        border-radius: 11.25px;
+    }
 }
