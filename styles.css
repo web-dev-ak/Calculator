@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'SF-Pro';
+    src: url(resources/SF-Pro-Display-Thin.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{overflow:hidden;}
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+#parent{
+    position: relative;
+}
+
+#calculator{
+    width: 440px;
+    height: 710px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#calculator-display{
+    padding-top: 50px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#calculator-buttons{
+    padding-top: 20px;
+    padding-left: 50px;
+    display: grid;
+    
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    gap: 40px;
+}
+
+#DisplayInput {
+    box-sizing: border-box;
+    width: 340px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 48px;
+    color: #001F3D;
+    padding-left: 14px;
+    outline: none;
+    background-color: #E2F2FF;
+    border: 1px solid #A2D2FF;
+}
+
+#DisplayResult{
+    box-sizing: border-box;
+    width: 340px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 48px;
+    color: #600023;
+    padding-left: 14px;
+    outline: none;
+    background-color: #FFEAF2;
+    border: 1px solid #FFAFCC;
+}
+
+.ButtonNumbers{
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 48px;
+    color: #083600;
+    background-color: #E3FFDE;
+    border: 1px solid #8CFF77;
+}
+
+.ButtonNumbers:hover {
+    background-color: #cfffc7; /* Change to your desired hover background color */
+    box-shadow: 4px 4px 4px rgba(140, 255, 119, 0.25);
+    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+}
+
+#button-zero{
+    width: 160px;
+}
+
+#button-percentge{
+    font-size: 36px;
+    grid-area: 4 / 3;
+}
+
+#button-add{
+    grid-area: 4 / 4;
+}
+
+#button-result{
+    grid-area: 5 / 1;
+}
+
+#button-clear{
+    grid-area: 5 / 3;
+}
+
+.ButtonOperators{
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 48px;
+    color: #13002D;
+    background-color: #E8D8FF;
+    border: 1px solid #C79EFF;
+}
+
+.ButtonOperators:hover {
+    background-color: #d5b7ff; /* Change to your desired hover background color */
+    box-shadow: 4px 4px 4px rgba(203, 166, 255, 0.25);
+    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+}
+
+.ButtonResult {
+    cursor: pointer;
+    width: 160px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 40px;
+    color: #463100;
+    background-color: #FFF0CD;
+    border: 1px solid #FFD166;
+}
+
+.ButtonResult:hover{
+    background-color: #FFE8B2;
+    box-shadow: 4px 4px 4px rgba(255, 215, 123, 0.25);
+    transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
+}
+
+.ButtonClear {
+    cursor: pointer;
+    width: 160px;
+    height: 70px;
+    border-radius: 15px;
+    font-family: SF-Pro;
+    font-weight: 100;
+    font-size: 40px;
+    color: #350002;
+    background-color: #FFD6D7;
+    border: 1px solid #FF5A5F;
+}
+
+.ButtonClear:hover{
+    background-color: #FF9497;
+    box-shadow: 4px 4px 4px rgba(255, 148, 151, 0.25);
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}

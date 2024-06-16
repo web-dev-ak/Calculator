@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div id="calculator">
+            <div id="calculator-display">
+                <input id="DisplayInput" placeholder="0">
+                <input id="DisplayResult" readonly>
+            </div>
+
+            <div id="calculator-buttons">
+
+                <button class = "ButtonNumbers" onclick = "clickToEnter('7')">7</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('8')">8</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('9')">9</button>
+                <button class = "ButtonOperators" onclick = "clickToEnter('/')">÷</button>
+
+                <button class = "ButtonNumbers" onclick = "clickToEnter('4')">4</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('5')">5</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('6')">6</button>
+                <button class = "ButtonOperators" onclick = "clickToEnter('*')">×</button>
+    
+                <button class = "ButtonNumbers" onclick = "clickToEnter('1')">1</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('2')">2</button>
+                <button class = "ButtonNumbers" onclick = "clickToEnter('3')">3</button>
+                <button class = "ButtonOperators" onclick = "clickToEnter('-')">-</button>
+    
+                <button id="button-zero" class = "ButtonNumbers" onclick = "clickToEnter('0')">0</button>
+                <button id="button-percentge" class = "ButtonOperators" onclick = "clickToEnter('%')">%</button>
+                <button id="button-add" class = "ButtonOperators" onclick = "clickToEnter('+')">+</button>
+    
+                <button id="button-result" class = "ButtonResult" onclick = "evaluateResult()">RESULT</button>
+                <button id="button-clear" class = "ButtonClear" onclick = "clearDisplay()">CLEAR</button>
+            </div>
+        </div>
+
+        <div id="heart-animation">
+            <svg id="hearts" viewBox="-600 -400 1200 800" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <symbol  id="heart" viewBox="-69 -16 138 138">
+                  <path d="M0,12
+                           C 50,-30 110,50  0,120
+                           C-110,50 -50,-30 0,12z"/>
+                  </symbol>
+              </defs>
+            </svg>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
